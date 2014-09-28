@@ -16,15 +16,18 @@ void remove_dup(char *str)
     int count[0x100] = { 0 };
     int len = strlen(str);
 
-    for (int i = 0; i < len;) {
-        if (count[(unsigned char) str[i]] > 0) {
-            memmove(str+i, str+i+1, len-i);
-            --len;
-        } else {
+    int j = 0;
+
+    for (int i = 0; i < len; ++i) {
+        if (count[(unsigned char) str[i]] == 0) {
             ++count[(unsigned char) str[i]];
-            ++i;
+
+            str[j] = str[i];
+            ++j;
         }
     }
+
+    str[j] = 0;
 }
 
 int main()
