@@ -3,6 +3,36 @@
 
 Interview coding question collection.
 
+# What You Must Know
+
+## Data Structure
+
+*   Linked Lists
+*   Binary Trees
+*   Tries Binary
+*   Stacks
+*   Queues
+*   Vectors / ArrayLists
+*   Hash Tables
+
+## Algorithm
+
+*   Breadth First Search
+*   Depth First Search
+*   Binary Search
+*   Merge Sort
+*   Quick Sort
+*   Tree Insert / Find / etc
+
+## Concept
+
+*   Bit Manipulation
+*   Singleton Design Pattern
+*   Factory Design Pattern
+*   Memory (Stack vs Heap)
+*   Recursion
+*   Big-O Time
+
 # Algorithm Approach
 
 ## Examplify
