@@ -30,11 +30,19 @@ void remove_dup(char *str)
 int main()
 {
     char abcd[] = "abcd";
+    char aaaa[] = "aaaa";
+    char aaabbb[] = "aaabbb";
     char abcdab[] = "abcdab";
     char empty[] = "";
 
     remove_dup(abcd);
     printf("`abcd` = `%s`\n", abcd);
+
+    remove_dup(aaaa);
+    printf("`aaaa` = `%s`\n", aaaa);
+
+    remove_dup(aaabbb);
+    printf("`aaabbb` = `%s`\n", aaabbb);
 
     remove_dup(abcdab);
     printf("`abcdab` = `%s`\n", abcdab);
