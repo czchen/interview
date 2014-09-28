@@ -22,9 +22,9 @@ int has_str_all_unique_chars(const char *str)
 
 int main()
 {
-    printf("\"abcdef\" is %d\n", has_str_all_unique_chars("abcdef"));
-    printf("\"abcdefa\" is %d\n", has_str_all_unique_chars("abcdefa"));
-    printf("\"\" is %d\n", has_str_all_unique_chars(""));
+    printf("`abcdef` is %d\n", has_str_all_unique_chars("abcdef"));
+    printf("`abcdefa` is %d\n", has_str_all_unique_chars("abcdefa"));
+    printf("`` is %d\n", has_str_all_unique_chars(""));
 
     return 0;
 }
