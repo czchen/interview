@@ -32,3 +32,7 @@ that you have the answer to ele- ments one and two.
 
 This is hacky, but it often works. Simply run through a list of data structures
 and try to apply each one.
+
+# Reference
+
+*   [Cracking the Coding Interview, fourth edition](http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X)
