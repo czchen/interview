@@ -1,4 +1,4 @@
-#include "lib.h"
+#include "testhelper.h"
 
 #include <stdio.h>
 #include <string.h>

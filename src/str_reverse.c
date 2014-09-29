@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "lib.h"
+#include "testhelper.h"
 
 void reverse_str(char *str)
 {
