@@ -5,6 +5,8 @@
 
 #include <stdio.h>
 
+#include "testhelper.h"
+
 int has_str_all_unique_chars(const char *str)
 {
     int count[0x100] = { 0 };
@@ -22,9 +24,11 @@ int has_str_all_unique_chars(const char *str)
 
 int main()
 {
-    printf("`abcdef` is %d\n", has_str_all_unique_chars("abcdef"));
-    printf("`abcdefa` is %d\n", has_str_all_unique_chars("abcdefa"));
-    printf("`` is %d\n", has_str_all_unique_chars(""));
+    struct Test test = { 0 };
 
-    return 0;
+    ok_int_eq(&test, 1, has_str_all_unique_chars("abcdef"));
+    ok_int_eq(&test, 0, has_str_all_unique_chars("abcdefa"));
+    ok_int_eq(&test, 1, has_str_all_unique_chars(""));
+
+    return get_status(&test);
 }
