@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "lib.h"
+
 void reverse_str(char *str)
 {
     int len = strlen(str);
@@ -19,18 +21,20 @@ void reverse_str(char *str)
 
 int main()
 {
+    struct Test test = { 0 };
+
     char abcd[] = "abcd";
     char abcde[] = "abcde";
     char empty[] = "";
 
     reverse_str(abcd);
-    printf("`abcd` = `%s`\n", abcd);
+    ok_str_eq(&test, "dcba", abcd);
 
     reverse_str(abcde);
-    printf("`abcde` = `%s`\n", abcde);
+    ok_str_eq(&test, "edcba", abcde);
 
     reverse_str(empty);
-    printf("`` = `%s`\n", empty);
+    ok_str_eq(&test, "", empty);
 
-    return 0;
+    return get_status(&test);
 }
