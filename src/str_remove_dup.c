@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "testhelper.h"
+
 void remove_dup(char *str)
 {
     int count[0x100] = { 0 };
@@ -32,6 +34,8 @@ void remove_dup(char *str)
 
 int main()
 {
+    struct Test test = { 0 };
+
     char abcd[] = "abcd";
     char aaaa[] = "aaaa";
     char aaabbb[] = "aaabbb";
@@ -39,19 +43,21 @@ int main()
     char empty[] = "";
 
     remove_dup(abcd);
+    ok_str_eq(&test, "abcd", abcd);
     printf("`abcd` = `%s`\n", abcd);
 
     remove_dup(aaaa);
-    printf("`aaaa` = `%s`\n", aaaa);
+    ok_str_eq(&test, "a", aaaa);
 
     remove_dup(aaabbb);
-    printf("`aaabbb` = `%s`\n", aaabbb);
+    ok_str_eq(&test, "ab", aaabbb);
 
     remove_dup(abcdab);
-    printf("`abcdab` = `%s`\n", abcdab);
+    ok_str_eq(&test, "abcd", abcdab);
+
 
     remove_dup(empty);
-    printf("`` = `%s`\n", empty);
+    ok_str_eq(&test, "", empty);
 
-    return 0;
+    return get_status(&test);
 }
