@@ -5,7 +5,7 @@
 
 void ok_str_eq(struct Test *test, const char *expect, const char *actual)
 {
-    if (strcmp(expect, actual)) {
+    if (strcmp(expect, actual) == 0) {
         printf("ok expect `%s`, actual `%s`\n", expect, actual);
         ++test->pass;
     } else {
