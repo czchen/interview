@@ -63,6 +63,16 @@ that you have the answer to ele- ments one and two.
 This is hacky, but it often works. Simply run through a list of data structures
 and try to apply each one.
 
+# Whiteboard Tips
+
+*   State your assumption.
+    *   Assume the caller does not pass `NULL` to any parameter.
+    *   Assume there is no integer overflow.
+    *   Assume upper and lower case are distinct.
+*   For integral type, ensure using `signed` and `unsigned` correctly.
+    *   Cast `char` to `unsigned char` when using it as array index.
+*   Ensure string is NULL-terminated.
+
 # Reference
 
 *   [Cracking the Coding Interview, fourth edition](http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X)
