@@ -3,8 +3,6 @@
  * What if you can not use additional data structures?
  */
 
-#include <stdio.h>
-
 #include "testhelper.h"
 
 int has_str_all_unique_chars(const char *str)

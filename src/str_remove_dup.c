@@ -8,7 +8,6 @@
  * FOLLOW UP Write the test cases for this method.
  */
 
-#include <stdio.h>
 #include <string.h>
 
 #include "testhelper.h"
@@ -44,7 +43,6 @@ int main()
 
     remove_dup(abcd);
     ok_str_eq(&test, "abcd", abcd);
-    printf("`abcd` = `%s`\n", abcd);
 
     remove_dup(aaaa);
     ok_str_eq(&test, "a", aaaa);

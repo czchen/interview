@@ -3,8 +3,6 @@
  * factorial.
  */
 
-#include <stdio.h>
-
 #include "testhelper.h"
 
 int trailing_factorial_zero_count(int x)

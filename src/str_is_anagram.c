@@ -4,7 +4,6 @@
 
 #include "testhelper.h"
 
-
 int is_anagram(const char *str1, const char *str2)
 {
     int count[0x100] = { 0 };
